@@ -25,6 +25,19 @@ SECRET_KEY = 'django-insecure-zyflfy8(6so9w6py28r=+du$*ar%e(4vr^#sdm&v*k+8435o5h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+import os
+
+# Environment variables
+SECRET_KEY = os.getenv('9d4-ax1@ve!a2iljud%*41(kd11some#z^2j&9t(se3+r=gia&', "fallback_dev_secret")
+DEBUG = False
+ALLOWED_HOSTS = ['ai-recommender-k6wy.onrender.com', 'localhost', '127.0.0.1']
+
+# Add your environment variables for MongoDB and OpenAI
+OPENAI_KEY = os.getenv("dab82bcf11b83362167ef1634b859e6a")
+MONGO_URI = os.getenv("d5f00a3894197fed3ab7df49986a603c")
+
+
+
 ALLOWED_HOSTS = []
 
 
